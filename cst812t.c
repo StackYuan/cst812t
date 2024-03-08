@@ -15,7 +15,7 @@
 
 #define DBG_LEVEL DBG_INFO // DBG_LOG //
 #define LOG_TAG "cst812t"
-#include <drv_log.h>
+#include <rtdbg.h>
 
 #ifdef PKG_USING_CST812T
 
