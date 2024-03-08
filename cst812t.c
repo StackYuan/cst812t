@@ -15,9 +15,9 @@
 
 #define DBG_LEVEL DBG_INFO // DBG_LOG //
 #define LOG_TAG "cst812t"
-#include <drv_log.h>
+#include <rtdbg.h>
 
-
+#ifdef PKG_USING_CST812T
 
 static struct rt_i2c_bus_device *ft_bus = NULL;
 
@@ -336,3 +336,5 @@ int rt_hw_cst8xx_init(const char *name, struct rt_touch_config *cfg)
 
     return RT_EOK;
 }
+
+#endif /* PKG_USING_CST812T */
