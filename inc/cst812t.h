@@ -14,6 +14,8 @@
 #include <rtthread.h>
 #include <rtdevice.h>
 
+#ifdef PKG_USING_CST812T
+
 #ifndef TOUCH_IRQ_PIN
 #define TOUCH_IRQ_PIN (rt_pin_get("p010"))
 #endif
@@ -70,3 +72,5 @@ rt_err_t cst8xx_probe(void);
 int rt_hw_cst8xx_init(const char *name, struct rt_touch_config *cfg);
 
 #endif
+
+#endif /* PKG_USING_CST812T */
